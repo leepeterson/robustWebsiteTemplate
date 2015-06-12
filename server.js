@@ -18,8 +18,7 @@ app.get('/', function (req, res) {
 
 // -- Socket.io   message handlers
 //
-{
-  console.log(' socket.io connection **CREATED**')
+io.on('connection', function (socket){
   socket.on('doAwesomeStuff', function(data){
     // do stuff with your data :)
   });
